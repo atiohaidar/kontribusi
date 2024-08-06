@@ -1,1 +1,1 @@
-KEbanyakan menggunakan AI
+Kebanyakan menggunakan AI
