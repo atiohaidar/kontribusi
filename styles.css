@@ -1,0 +1,76 @@
+:root {
+    --bs-primary: #28a745;
+    --bs-primary-rgb: 40, 167, 69;
+}
+
+body {
+    background-image: url('https://scontent.fbdo12-1.fna.fbcdn.net/v/t1.18169-9/18922218_660704404131114_7452409081822480126_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHp_ZwwqU-GunoG51MyuS2Ldrs3slAyjON2uzeyUDKM499aV0hz8iDkISZowgJ8FfRTXF8gaKOiXl5ukDemwDSy&_nc_ohc=0mcy0WlitHQQ7kNvgGTCIdp&_nc_ht=scontent.fbdo12-1.fna&oh=00_AYA01EIdgSa3s7_EEvkGdMUKkbJMTm1L7b9hcjag-G-MDg&oe=66D8FAB8');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+
+.parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #28a745;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

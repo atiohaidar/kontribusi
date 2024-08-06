@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="parallax">
+        <div class="parallax__layer parallax__layer--back"></div>
+        <div class="parallax__layer parallax__layer--base">
+            <header class="bg-light py-3">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo_Telkom_University_potrait.png" height="80px" width="80px" alt="Left Logo" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <h1 class="mb-0">Sebuah Formulir Entah Apa</h1>
+                        </div>
+                        <div class="col-md-3 text-end">
+                            <img src="https://ldkalfath.orgs.telkomuniversity.ac.id/wp-content/uploads/sites/105/2020/04/AL-FATH-KECIL.png" height="80px" width="80px" alt="Right Logo" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="container my-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <form id="dynamicForm" class="needs-validation" novalidate>
+                                    <!-- Form fields will be dynamically inserted here -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="bg-light py-3 mt-auto footer absolute-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><strong>Deadline:</strong> <span id="deadline"></span></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <p><strong>Current Time:</strong> <span id="current-time"></span></p>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <p><strong>Location:</strong> <span id="current-location"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Custom Dialog Modal -->
+    <div class="modal fade" id="customDialog" tabindex="-1" aria-labelledby="customDialogLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="customDialogLabel">Form Submission</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="customDialogMessage"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="spinner-overlay" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
