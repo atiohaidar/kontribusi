@@ -1,0 +1,1 @@
+KEbanyakan menggunakan AI
